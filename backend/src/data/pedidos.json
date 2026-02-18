@@ -1,12 +1,78 @@
 [
   {
+    "store_id": "f052054c-e0a0-4768-ab55-7cb7ead57371",
+    "order_id": "a1b2c3d4-e5f6-4788-a999-b1c2d3e4f501",
+    "order": {
+      "payments": [
+        {
+          "prepaid": true,
+          "value": 89.90,
+          "origin": "CREDIT_CARD"
+        }
+      ],
+      "last_status_name": "CONFIRMED",
+      "store": {
+        "name": "Coco Bambu Loja Teste",
+        "id": "f052054c-e0a0-4768-ab55-7cb7ead57371"
+      },
+      "total_price": 89.90,
+      "order_id": "a1b2c3d4-e5f6-4788-a999-b1c2d3e4f501",
+      "items": [
+        {
+          "code": 4012,
+          "price": 89.90,
+          "observations": "Sem cebola",
+          "total_price": 89.90,
+          "name": "Camarao Alfredo",
+          "quantity": 1,
+          "discount": 0,
+          "condiments": []
+        }
+      ],
+      "created_at": 1770842000000,
+      "statuses": [
+        {
+          "created_at": 1770842000500,
+          "name": "RECEIVED",
+          "order_id": "a1b2c3d4-e5f6-4788-a999-b1c2d3e4f501",
+          "origin": "STORE"
+        },
+        {
+          "created_at": 1770842100000,
+          "name": "CONFIRMED",
+          "order_id": "a1b2c3d4-e5f6-4788-a999-b1c2d3e4f501",
+          "origin": "STORE"
+        }
+      ],
+      "customer": {
+        "temporary_phone": "+556199998888",
+        "name": "Ana Clara Silva"
+      },
+      "delivery_address": {
+        "reference": "Portão A",
+        "street_name": "Rua das Pitangueiras",
+        "postal_code": "71.900-100",
+        "country": "BR",
+        "city": "Brasília",
+        "neighborhood": "Águas Claras",
+        "street_number": "1050",
+        "state": "Distrito Federal",
+        "coordinates": {
+          "longitude": -48.025000,
+          "latitude": -15.835000,
+          "id": 1323150
+        }
+      }
+    }
+  },
+  {
     "store_id": "98765432-abcd-ef00-1234-567890abcdef",
     "order_id": "b2c3d4e5-f6a7-4899-b000-c2d3e4f502",
     "order": {
       "payments": [
         {
           "prepaid": true,
-          "value": 54,
+          "value": 54.00,
           "origin": "PIX"
         }
       ],
@@ -15,14 +81,14 @@
         "name": "COCO BAMBU CHIQUE CHIQUE",
         "id": "98765432-abcd-ef00-1234-567890abcdef"
       },
-      "total_price": 54,
+      "total_price": 54.00,
       "order_id": "b2c3d4e5-f6a7-4899-b000-c2d3e4f502",
       "items": [
         {
           "code": 105,
-          "price": 54,
+          "price": 54.00,
           "observations": null,
-          "total_price": 54,
+          "total_price": 54.00,
           "name": "Camarao Delicia",
           "quantity": 1,
           "discount": 0,
@@ -58,8 +124,8 @@
         "street_number": "Bloco B",
         "state": "Distrito Federal",
         "coordinates": {
-          "longitude": -47.88,
-          "latitude": -15.78,
+          "longitude": -47.880000,
+          "latitude": -15.780000,
           "id": 1323160
         }
       }
@@ -72,23 +138,23 @@
       "payments": [
         {
           "prepaid": true,
-          "value": 250.5,
+          "value": 250.50,
           "origin": "VR"
         }
       ],
-      "last_status_name": "DELIVERED",
+      "last_status_name": "DISPATCHED",
       "store": {
         "name": "Coco Bambu Loja Teste",
         "id": "f052054c-e0a0-4768-ab55-7cb7ead57371"
       },
-      "total_price": 250.5,
+      "total_price": 250.50,
       "order_id": "c3d4e5f6-a7b8-4900-c111-d3e4f503",
       "items": [
         {
           "code": 5001,
-          "price": 250.5,
+          "price": 250.50,
           "observations": null,
-          "total_price": 250.5,
+          "total_price": 250.50,
           "name": "Camarão Internacional (Serve 4)",
           "quantity": 1,
           "discount": 0,
@@ -114,12 +180,6 @@
           "name": "DISPATCHED",
           "order_id": "c3d4e5f6-a7b8-4900-c111-d3e4f503",
           "origin": "STORE"
-        },
-        {
-          "created_at": 1771345004851,
-          "name": "DELIVERED",
-          "order_id": "c3d4e5f6-a7b8-4900-c111-d3e4f503",
-          "origin": "STORE"
         }
       ],
       "customer": {
@@ -136,78 +196,71 @@
         "street_number": "Conjunto 9",
         "state": "Distrito Federal",
         "coordinates": {
-          "longitude": -47.9,
-          "latitude": -15.85,
+          "longitude": -47.900000,
+          "latitude": -15.850000,
           "id": 1323170
         }
       }
     }
   },
   {
-    "store_id": "f052054c-e0a0-4768-ab55-7cb7ead57371",
-    "order_id": "a7fab498-cb42-49bf-8126-db8d875bbda9",
+    "store_id": "98765432-abcd-ef00-1234-567890abcdef",
+    "order_id": "d4e5f6a7-b8c9-5011-d222-e4f504",
     "order": {
-      "created_at": 1771340052631,
-      "total_price": 160,
-      "order_id": "a7fab498-cb42-49bf-8126-db8d875bbda9",
-      "last_status_name": "CANCELED",
-      "statuses": [
-        {
-          "name": "RECEIVED",
-          "created_at": 1771340052631,
-          "order_id": "a7fab498-cb42-49bf-8126-db8d875bbda9",
-          "origin": "STORE"
-        },
-        {
-          "created_at": 1771342091677,
-          "name": "CANCELED",
-          "order_id": "a7fab498-cb42-49bf-8126-db8d875bbda9",
-          "origin": "STORE"
-        }
-      ],
-      "store": {
-        "name": "Coco Bambu Teste",
-        "id": "f052054c-e0a0-4768-ab55-7cb7ead57371"
-      },
       "payments": [
         {
           "prepaid": false,
-          "value": 144.828,
-          "origin": "PIX",
-          "discount": 10
+          "value": 35.90,
+          "origin": "CASH"
+        }
+      ],
+      "last_status_name": "RECEIVED",
+      "store": {
+        "name": "COCO BAMBU CHIQUE CHIQUE",
+        "id": "98765432-abcd-ef00-1234-567890abcdef"
+      },
+      "total_price": 35.90,
+      "order_id": "d4e5f6a7-b8c9-5011-d222-e4f504",
+      "items": [
+        {
+          "code": 202,
+          "price": 35.90,
+          "observations": null,
+          "total_price": 35.90,
+          "name": "Batata Frita Especial",
+          "quantity": 1,
+          "discount": 0,
+          "condiments": []
+        }
+      ],
+      "created_at": 1770845000000,
+      "statuses": [
+        {
+          "created_at": 1770845000500,
+          "name": "RECEIVED",
+          "order_id": "d4e5f6a7-b8c9-5011-d222-e4f504",
+          "origin": "STORE"
         }
       ],
       "customer": {
-        "name": "Teste3",
-        "temporary_phone": "556199999999"
+        "temporary_phone": "+556196665555",
+        "name": "Roberto Almeida"
       },
       "delivery_address": {
-        "reference": "",
-        "street_name": "Quadra ES 7B",
-        "postal_code": "73083200",
-        "country": "Brasil",
+        "reference": "Edifício Office Tower",
+        "street_name": "SCN Quadra 2",
+        "postal_code": "70.712-900",
+        "country": "BR",
         "city": "Brasília",
-        "neighborhood": "Setor de Mansões de Sobradinho",
-        "street_number": "5",
-        "state": "DF",
+        "neighborhood": "Asa Norte",
+        "street_number": "Sala 404",
+        "state": "Distrito Federal",
         "coordinates": {
-          "latitude": 0,
-          "longitude": 0,
-          "id": 19311
+          "longitude": -47.885000,
+          "latitude": -15.790000,
+          "id": 1323180
         }
-      },
-      "items": [
-        {
-          "code": 1234,
-          "name": "Pizza Margherita",
-          "price": 40.23,
-          "quantity": 4,
-          "discount": 0,
-          "condiments": [],
-          "total_price": "160.92",
-          "observations": null
-        }
-      ]
+      }
     }
   }
 ]
