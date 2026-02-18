@@ -60,6 +60,7 @@ export function populateOrderTable(orders) {
         deleteBtn.addEventListener('click', () => {
 
             deleteOrderById(order.order_id);
+            window.location.reload();
 
         });
         
