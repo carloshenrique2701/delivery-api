@@ -30,13 +30,13 @@ HTML/CSS/JS puro
 Docker
 Docker compose
 
----
+--
 
 ## Armazenamento
 
-pedidos.json (para oteste o mais aplicável eraa utilização desse arquivo, para um desenvolvimento mais sério, utilizaria MongoDB)
+pedidos.json (para o teste o mais aplicável era a utilização desse arquivo, porém, para um desenvolvimento mais sério, utilizaria MongoDB)
 
----
+--
 
 ## Bibliotecas do NodeJs
 
@@ -44,25 +44,24 @@ Cors
 Express
 Uuid
 
----
+--
 
 ## Bibliotecas utilizadas no frontend
 
 ChartJs
 
----
 
 ## APIs externas
 
 Nominatim
 
----
+--
 
 ## Descrição
 
 CRUD simples que tinha como abjetivo: criar, editar, atualizar status e excluir pedidos de um delivery. O backend foi estruturado e separado por responsabilidades: controllers, routes, data, services e utils. No frontend foi utilizado o básico (HTML/CSS/JS puro), também separado por responsabilidades e componentes.
 
----
+--
 
 ## Detalhes Técnicos
 
