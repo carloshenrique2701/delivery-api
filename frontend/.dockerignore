@@ -4,3 +4,6 @@ node_modules
 README.md
 .DS_Store
 *.log
+LICENCE.md
+teste.txt
+teste-api.sh
