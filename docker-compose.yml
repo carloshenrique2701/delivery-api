@@ -8,7 +8,6 @@ services:
       - "3000:3000" 
     volumes:
       - ./backend/src/data:/app/src/data
-      - ./backend:/app
     restart: unless-stopped
 
   frontend:

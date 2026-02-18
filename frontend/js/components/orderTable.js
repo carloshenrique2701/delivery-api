@@ -57,11 +57,9 @@ export function populateOrderTable(orders) {
         });
 
         const deleteBtn = tr.querySelector('.delete');
-        deleteBtn.addEventListener('click', (e) => {
+        deleteBtn.addEventListener('click', () => {
 
-            e.stopPropagation(); 
             deleteOrderById(order.order_id);
-            window.location.reload;
 
         });
         
