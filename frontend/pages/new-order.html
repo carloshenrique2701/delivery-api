@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Novo Pedido - Delirery-API</title>
+        <link rel="stylesheet" href="../css/pages/new-order.css">
+        <link rel="stylesheet" href="../css/components/buttons.css">
+        <link rel="stylesheet" href="../css/components/inputs.css">
+        <link rel="stylesheet" href="../css/components/selects.css">
+        <link rel="stylesheet" href="../css/components/tables.css">
+
+    </head>
+    <body>
+
+        <header><h1>Delivery-API</h1></header>
+
+        <main>
+
+            <form id="newOrderForm">
+
+                <h2>Novo Pedido</h2>
+
+                <div class="section">
+                    <h3>Produtos</h3>
+
+                    <div class="data">
+                        <label for="itemSelect">Selecione um produto: </label>
+                        <select id="itemSelect">
+                            <option value="PizzaMargherita">Pizza Margherita</option>
+                            <option value="BatataFritaEspecial">Batata Frita Especial</option>
+                            <option value="CamaraoInternacional">Camarão Internacional (Serve 4)</option>
+                            <option value="CamaraoDelicia">Camarao Delicia</option>
+                            <option value="CamaraoAlfredo">Camarao Alfredo</option>
+                            <option value="HamburguerDeSiri">Hambúrguer de Siri</option>
+                            <option value="DonutsRosados">Donuts rosados</option>
+                            <option value="BolinhosnoVapor">Bolinhos no Vapor</option>
+                        </select>
+
+                        <div class="input-wrapper">
+            
+                            <input type="number" id="qntItem" placeholder="">
+                            <label for="qntItem">Digite a quantidade:</label>
+            
+                        </div>
+
+                        <label for="itemCondiments">Escolha 1 acompanhamento: </label>
+                        <select id="itemCondiments">
+                            <option value="">Nenhum</option>
+                            <option value="arroz">Arroz</option>
+                            <option value="batata">Batata Frita</option>
+                            <option value="camarao">Camarão</option>
+                            <option value="salada">Salada</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-group" style="margin-top: 20px;">
+                        <button type="button" id="addItem">Adicionar</button>
+                    </div>
+                    
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Adicionais</th>
+                                <th>Quantidade</th>
+                                <th>Preço</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="ProductList"></tbody>
+
+                    </table>
+
+                </div>
+    
+                <div class="section">
+
+                    <h3>Informações Pessoais</h3>
+
+                    <div class="data">
+                        <div class="input-wrapper">
+        
+                            <input type="text" id="customerName" placeholder="" required>
+                            <label for="customerName">Digite seu nome:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="customerPhone" placeholder="" required>
+                            <label for="customerPhone">Digite seu telefone:*</label>
+            
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="section">
+                    <h3>Endereço</h3>
+
+                    <div class="data">
+                        <div class="input-wrapper">
+        
+                            <input type="text" id="addressPostalCode" placeholder="" required>
+                            <label for="addressPostalCode">CEP:*</label>
+            
+                        </div>
+    
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressCountry" placeholder="" required>
+                            <label for="addressCountry">País:*</label>
+            
+                        </div>
+                        
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressState" placeholder="" required>
+                            <label for="addressState">Estado:*</label>
+            
+                        </div>
+    
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressCity" placeholder="" required>
+                            <label for="addressCity">Cidade:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressNeighborhood" placeholder="" required>
+                            <label for="addressNeighborhood">Bairro:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressStreet" placeholder="" required>
+                            <label for="addressStreet">Rua:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressNumber" placeholder="" required>
+                            <label for="addressNumber">Número:*</label>
+            
+                        </div>
+    
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressReference" placeholder="">
+                            <label for="addressReference">Ponto de Referência:</label>
+            
+                        </div>
+                    </div>
+        
+                </div>
+
+                <div class="section">
+
+                    <h3>Pagamentos</h3>
+
+                    <h4 id="totalValue"></h4>
+
+                    <div class="data">
+                        <label for="paymentMode">Selecione um Modo de Pagamento (O pagamento é feito no momento da entrega):</label>
+                        <select id="paymentMode">
+                            <option value="CREDIT_CARD">Cartão de Crédito</option>
+                            <option value="DEBIT_CARD">Cartão de Débito</option>
+                            <option value="CASH">Dinheiro</option>
+                            <option value="PIX">PIX</option>
+                            <option value="VR">Vale Refeição</option>
+                            <option value="VA">Vale Alimentação</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="btn-group" style="margin-top: 30px;">
+
+                    <button type="button" class="clear" onclick="window.location.href='../index.html'" >Voltar</button>
+                    <button type="submit">Finalizar Pedido</button>
+
+                </div>
+
+            </form>
+
+
+        </main>
+        
+        <script src="../js/components/newOrderElements.js"></script>
+        <script type="module" src="../js/pages/new-order.js"></script>
+
+    </body>
+</html>

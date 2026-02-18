@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coco Bambu - Delivery-API</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/components/selects.css">
+        <link rel="stylesheet" href="css/components/tables.css">
+        <link rel="stylesheet" href="css/components/buttons.css">
+        <link rel="stylesheet" href="css/components/inputs.css">
+        <link rel="stylesheet" href="css/components/modals.css">
+        <link rel="stylesheet" href="css/components/graphs.css">
+
+    </head>
+    <body>
+
+        <header><h1 style="text-align: center;">Delivery-API</h1></header>
+
+        <main>
+
+            <div class="right-panel">
+
+                <h2>Lista de Pedidos</h2>
+
+                <form class="filters" id="filtersForm">
+
+                    <div class="status">
+                        <label for="status-filter">Status:</label>
+                        <select id="status-filter"> 
+                            <option value="">Todos</option>
+                            <option value="RECEIVED">Recebido</option>
+                            <option value="CONFIRMED">Confirmado</option>
+                            <option value="DISPATCHED">Enviado</option>
+                            <option value="DELIVERED">Entregue</option>
+                            <option value="CANCELED">Cancelado</option>
+                        </select>
+                    </div>
+
+                    <div class="input-wrapper">
+
+                        <input type="number" id="min-total-price" placeholder="">
+                        <label for="min-total-price">Digite o preço mínimo:</label>
+
+                    </div>
+                    <div class="input-wrapper">
+
+                        <input type="number" id="max-total-price" placeholder="">
+                        <label for="max-total-price">Digite o preço máximo:</label>
+
+                    </div>
+                    <div class="input-wrapper">
+
+                        <input type="number" id="itens" placeholder="">
+                        <label for="itens">Digite a quantidade de itens:</label>
+
+                    </div>
+
+                    <div class="date-filter">
+
+                        <input type="date" id="start-date">
+                        <label for="start-date">Entre:</label>
+                        <input type="date" id="end-date">
+
+                    </div>
+
+                    <button type="submit">Filtrar</button>
+                    <button onclick="limparFiltros()" class="clear" >Limpar Filtros</button>
+                    <button type="button" onclick="window.location.href = 'pages/new-order.html'" class="new" >+ Novo Pedido</button>
+
+                </form>
+
+                <div class="table" id="table">
+                    
+                </div>
+
+            </div>
+
+            <div class="left-panel">
+
+                <div class="geral-infos">
+
+                    <h3 id="all-orders"></h3>
+
+                </div>
+
+                <div class="geral-infos graph-container" id="months-graph-container" onclick="graphExpands('months')">
+
+                    <canvas class="graph" id="order-months-graph"></canvas>
+
+                </div>
+
+                <div class="geral-infos graph-container" id="status-graph-container" onclick="graphExpands('status')">
+
+                    <canvas class="graph" id="order-status-graph"></canvas>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <div id="modal-graphs">
+            <span class="close-modal-graph" onclick="closeModalGraph()">&times;</span>
+
+        </div>
+
+        <footer>&copy; Todos os direitos reservados.</footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="module" src="js/pages/main.js"></script>
+        <script>
+            function limparFiltros(e) {
+
+                const filtersForm = document.getElementById('filtersForm');
+                filtersForm.reset();
+
+            }
+
+            function graphExpands(type) {
+                
+                const modal = document.getElementById('modal-graphs');
+
+                let container;
+
+                if (type === 'months') {
+                    
+                    container = document.getElementById('months-graph-container');
+                    container.classList.add('graphs-modal');
+
+                } else if (type === 'status') {
+                    
+                    container = document.getElementById('status-graph-container');
+                    container.classList.add('graphs-modal');
+                
+                }
+
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        closeModalGraph();
+                    }
+                });
+
+                modal.style.display = 'flex'
+
+            }
+
+            function closeModalGraph() {
+                
+                const modal = document.getElementById('modal-graphs');
+                const containers = document.querySelectorAll('.graphs-modal');
+                containers.forEach(container => container.classList.remove('graphs-modal'));
+                modal.style.display = 'none';
+                
+            }
+
+            
+        </script>
+
+    </body>
+</html>

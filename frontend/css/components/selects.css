@@ -1,0 +1,17 @@
+select {
+
+    padding: 10px;
+    border: 1px solid #f8a100;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+
+}
+
+select:hover {
+
+    background-color: #f8a100;
+    border-bottom: 3px solid #000;
+
+}

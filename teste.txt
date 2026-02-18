@@ -1,0 +1,10 @@
+#Comandos para testar a API por requisições no terminal
+
+# Dê permissão de execução (primeira vez apenas)
+chmod +x test-api.sh
+
+# Execute o script
+./test-api.sh
+
+# Ou se preferir salvar a saída em um arquivo
+./test-api.sh > resultado-testes.txt

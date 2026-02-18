@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Novo Pedido - Delirery-API</title>
+        <link rel="stylesheet" href="../css/pages/edit-order.css">
+        <link rel="stylesheet" href="../css/components/buttons.css">
+        <link rel="stylesheet" href="../css/components/inputs.css">
+        <link rel="stylesheet" href="../css/components/selects.css">
+        <link rel="stylesheet" href="../css/components/tables.css">
+
+    </head>
+    <body>
+
+        <header><h1>Delivery-API</h1></header>
+
+        <main>
+
+            <form id="editOrderForm">
+
+                <h2>Editar Pedido</h2>
+
+    
+                <div class="section">
+
+                    <h3>Informações Pessoais</h3>
+
+                    <div class="data" id="sectionCostumer">
+                        <div class="input-wrapper">
+        
+                            <input type="text" id="customerName" placeholder="" required>
+                            <label for="customerName">Digite seu nome:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="customerPhone" placeholder="" required>
+                            <label for="customerPhone">Digite seu telefone:*</label>
+            
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="section">
+                    <h3>Endereço</h3>
+
+                    <div class="data" id="sectionAddress">
+                        <div class="input-wrapper">
+        
+                            <input type="text" id="addressPostalCode" placeholder="" required>
+                            <label for="addressPostalCode">CEP:*</label>
+            
+                        </div>
+    
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressCountry" placeholder="" required>
+                            <label for="addressCountry">País:*</label>
+            
+                        </div>
+                        
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressState" placeholder="" required>
+                            <label for="addressState">Estado:*</label>
+            
+                        </div>
+    
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressCity" placeholder="" required>
+                            <label for="addressCity">Cidade:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressNeighborhood" placeholder="" required>
+                            <label for="addressNeighborhood">Bairro:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressStreet" placeholder="" required>
+                            <label for="addressStreet">Rua:*</label>
+            
+                        </div>
+            
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressNumber" placeholder="" required>
+                            <label for="addressNumber">Número:*</label>
+            
+                        </div>
+    
+                        <div class="input-wrapper">
+            
+                            <input type="text" id="addressReference" placeholder="">
+                            <label for="addressReference">Ponto de Referência:</label>
+            
+                        </div>
+                    </div>
+        
+                </div>
+
+                <div class="section">
+
+                    <h3>Pagamentos</h3>
+
+                    <h4 id="totalValue"></h4>
+
+                    <div class="data" id="sectionPayment">
+                        <label for="paymentMode">Selecione um Modo de Pagamento (O pagamento é feito no momento da entrega):</label>
+                        <select id="paymentMode">
+                            <option value="CREDIT_CARD">Cartão de Crédito</option>
+                            <option value="DEBIT_CARD">Cartão de Débito</option>
+                            <option value="CASH">Dinheiro</option>
+                            <option value="PIX">PIX</option>
+                            <option value="VR">Vale Refeição</option>
+                            <option value="VA">Vale Alimentação</option>
+                        </select>
+
+                        <label for="prepaid">Pago?</label>
+                        <input type="checkbox" id="prepaid" >
+
+                    </div>
+
+                </div>
+
+                <div class="btn-group" style="margin-top: 30px;">
+
+                    <button type="button" class="clear" onclick="window.location.href='../index.html'" >Voltar</button>
+                    <button type="submit">Editar</button>
+
+                </div>
+
+            </form>
+
+
+        </main>
+        
+        <script type="module" src="../js/pages/edit-order.js"></script>
+        <script type="module" src="../js/pages/address.js"></script>
+
+    </body>
+</html>

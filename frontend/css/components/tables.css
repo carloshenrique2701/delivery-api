@@ -1,0 +1,91 @@
+table {
+    
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    overflow: hidden;
+
+}
+
+th, td {
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+
+}
+
+/* Remove bordas duplicadas */
+th:not(:last-child),
+td:not(:last-child) {
+    border-right: none;
+}
+
+tr:not(:last-child) th,
+tr:not(:last-child) td {
+    border-bottom: none;
+}
+
+td {
+
+    cursor: pointer;
+
+}
+
+th {
+
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f8a100;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+thead tr:first-child th:first-child {
+    border-top-left-radius: 8px;
+}
+
+thead tr:first-child th:last-child {
+    border-top-right-radius: 8px;
+}
+
+tfoot tr:first-child th:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+tfoot tr:first-child th:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+.actions {
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+tfoot th {
+
+    padding: 10px;
+    background-color: #f8a100;
+    color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: none;
+
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tr:hover {
+
+    background-color: #d1d1d1;
+    
+}
