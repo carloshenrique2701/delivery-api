@@ -57,9 +57,9 @@ export function populateOrderTable(orders) {
         });
 
         const deleteBtn = tr.querySelector('.delete');
-        deleteBtn.addEventListener('click', () => {
+        deleteBtn.addEventListener('click', async () => {
 
-            deleteOrderById(order.order_id);
+            await deleteOrderById(order.order_id);
             window.location.reload();
 
         });
